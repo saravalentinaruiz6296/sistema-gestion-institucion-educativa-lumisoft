@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style_contacto.css">
+</head>
+<body>
+    <header>
+        <!-- Contenedor del logo -->
+        <div class="logo_lema">
+            <img src="img/logo.png" alt="Logo">
+            <img src="img/lema.png" alt="Lema">
+        </div>
+
+    <!--Menú de navegación principal-->
+    <nav>
+        <ul class="menu">
+
+            <!--Opción Inicio-->
+            <li><a href="index.html">Inicio</a></li>
+
+            <!--Opción Nosotros-->
+            <li class="submenu">
+                <a href="nosotros.html">Nosotros &#9662;</a>
+                <ul class="submenu">
+                    <li><a href="nosotros.html#historia">Historia</a></li>
+                    <li><a href="nosotros.html#mision">Misión</a></li>
+                    <li><a href="nosotros.html#vision">Visión</a></li>
+                    <li><a href="nosotros.html#perfil">Perfil</a></li>
+                    <li><a href="nosotros.html#instalaciones">Instalaciones</a></li>
+                </ul>
+            </li>
+
+            <!--Opción Programas Académicos-->
+            <li class="submenu">
+                <a href="programa_academico.html">Programas Académicos &#9662;</a>
+                <ul class="submenu">
+                    <li><a href="programa_academico_preescolar.html">Preescolar</a></li>
+                    <li><a href="programa_academico_primaria.html">Primaria</a></li>
+                    <li><a href="programa_academico_bachillerato.html">Bachillerato</a></li>
+                </ul>
+            </li>
+
+            <!--Opción Servicios-->
+            <li><a href="servicios.html">Servicios</a></li>
+
+            <!--Opción Noticias-->
+            <li><a href="noticias.html">Noticias</a></li>
+
+            <!--Opción Contacto-->
+            <li><a href="contacto.html">Contacto</a></li>
+
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <h1>Contacto</h1>
+        <article class="contenedor_contacto">
+            <h2 hidden>Contacto</h2>
+            <section class="informacion_contacto">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes dudas o comentarios?  
+                   Estamos aquí para escucharte. 
+                   Completa el formulario y pronto nos pondremos en contacto contigo.
+                </p>
+            
+                <div class="l_contacto">
+                    <ul class="f_contacto">
+                       <li>
+                        <img src="img/ubicacion.png" alt="ícono Ubicación">
+                        Transversal 2 Este 58A-235. Tunja
+                       </li>
+                       <li>
+                        <img src="img/llamada.png" alt="ícono Telefono">
+                        +57 3178800792
+                       </li>
+                       <li>
+                        <img src="img/correo.png" alt="ícono Correo">
+                        admin@academiaateneatunja.edu.co
+                       </li>
+                    </ul>
+                </div>
+            
+                <div class="mapa">
+                    <iframe
+                    src="https://www.google.com/maps?q=Tunja,Boyacá,Colombia&output=embed"
+                    loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+
+            <section class="formulario">
+                <h2 hidden>Formulario</h2>
+                <form action="#">
+                    <div class="fila">
+                        <input type="text"
+                        placeholder="Nombres"
+                        required
+                        minlength="3"
+                        maxlength="40"
+                        pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                        title="Solo se permiten letras">
+
+                        <input type="text"
+                        placeholder="Apellidos"
+                        required
+                        maxlength="3"
+                        minlength="40"
+                        pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                        title="Solo se permiten letras">
+                    </div>
+
+                    <div class="fila">
+                        <input type="tel"
+                        placeholder="Teléfono"
+                        required
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        title="Ingrese un teléfono de 10 dígitos">
+
+                        <input type="email"
+                        name="correo"
+                        placeholder="Correo Electrónico"
+                        required
+                        maxlength="60">
+                    </div>
+
+                    <div class="fila_programa">
+                        <label>
+                            Programa de Interés
+                        </label>
+                        <div class="opciones">
+                            <label>
+                                <input type="radio"
+                                name="programa"
+                                value="Preescolar"
+                                required>
+                                Preescolar
+                            </label>
+
+                            <label>
+                                <input type="radio"
+                                name="programa"
+                                value="Primaria">
+                                Primaria
+                            </label>
+
+                            <label>
+                                <input type="radio"
+                                name="programa"
+                                value="Bachillerato">
+                                Bachillerato
+                            </label>
+                        </div>
+                    </div>
+                    <textarea 
+                    name="comentario"
+                    placeholder="Inquietud o Comentario"
+                    required
+                    minlength="15"
+                    maxlength="250">
+                    </textarea>
+
+                    <div class="botones">
+                        <button type="submit">
+                            Enviar
+                        </button>
+
+                        <button type="reset">
+                            Limpiar
+                        </button>
+                    </div>
+                </form>
+
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+
+    <!-- Contenedor del logo -->
+        <div class="footer_logo">
+            <img src="img/logo.png" alt="Logo">
+            <img src="img/lema.png" alt="Lema">
+        </div>
+
+    <!--Contenedor de Información de contacto-->
+        <div class="footer_contacto">
+            <ul class="f_contacto">
+                <li>
+                    <img src="img/ubicacion.png" alt="ícono Ubicación">
+                     Transversal 2 Este 58A-235. Tunja
+                </li>
+                <li>
+                    <img src="img/llamada.png" alt="ícono Telefono">
+                    +57 3178800792
+                </li>
+                <li>
+                    <img src="img/correo.png" alt="ícono Correo">
+                    admin@academiaateneatunja.edu.co
+                </li>
+            </ul>
+        </div>
+
+    <!--Contenedor redes y Copyrigth-->
+    <div class="footer_info_redes">
+    <!--Contenedor Redes-->
+        <div class="footer_redes">
+        <a href="https://www.youtube.com/" target="_blank">
+            <img src="img/youtube.png" alt="ícono de Youtube">
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+            <img src="img/facebook.png" alt="ícono de Facebook">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="img/instagram.png" alt="ícono de Instagram">
+        </a>
+        </div>
+
+    <!--Copyrigth-->
+        <div class="footer_derechos">
+            © 2026 - Academia Atenea
+        </div>
+    </div>
+
+    </footer>
+</body>
+</html>

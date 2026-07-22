@@ -1,0 +1,222 @@
+/*---------------------------------------------------------
+-----------------------------------------------------------
+--------------------NOSOTROS-------------------------------
+-----------------------------------------------------------
+-----------------------------------------------------------*/
+
+.historia{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 80px;
+    /* ANIMACIÓN */
+    animation: aparecerDerecha 1.5s ease;
+}
+
+.historia_texto{
+    flex: 1;
+}
+
+.historia_texto{
+    font-size: 24px;
+    color:#0a2f63;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.historia_texto p{
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #173b70;
+}
+
+.historia_texto{
+    display: inline-block;
+    vertical-align: top;
+    width: 550px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #d8ccbb;
+    border-radius: 12px; /* esquinas redondeadas*/
+    background-color: #ffffff; /* fondo blanco */
+    box-shadow: 0 2px 8px #d3c7b5; /* sombra suave*/
+    text-align: center; /* centra el contenido de la tarjeta */
+}
+
+.historia_multimedia video{
+    width:100%;
+    max-width:600px;
+    border-radius:20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.historia_multimedia{
+    flex: 1;
+    display: flex;
+    flex-direction: column;           /* hace que el video y iframe se apilen uno debajo del otro.*/
+    gap: 30px;
+    align-items: center;
+}
+
+.himno{
+    display:flex;
+    justify-content:center;
+}
+
+.himno video{
+    width: 350px;
+}
+
+.historia_multimedia iframe{
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.mision_vision{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    padding:60px 80px;
+}
+
+.mision,
+.vision{
+    width: 700px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #d8ccbb;
+    border-radius: 12px; /* esquinas redondeadas*/
+    background-color: #ffffff; /* fondo blanco */
+    box-shadow: 0 2px 8px #d3c7b5; /* sombra suave*/
+    text-align: center;   /* centra el contenido de la tarjeta */
+}
+
+.mision img,
+.vision img{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    border: 5px solid #2e5597;;
+    object-fit: contain;  /*ajusta la imagen para que quepa dentro de su contenedor mostrándose completa y sin deformarse*/
+    margin-bottom:20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.mision h2,
+.vision h2{
+    font-size: 30px;
+    color:#0a2f63;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.mision,
+.vision{
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    color: #173b70;
+}
+
+.mision:hover,
+.vision:hover{
+    transform: scale(1.05);
+}
+
+.perfil{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:60px;
+    padding:80px;
+}
+
+.perfil_imagen{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.perfil_imagen img{
+    width:500px;
+    border-radius:15px;
+}
+
+.perfil_imagen img:hover{
+    transform: scale(1.05);
+}
+
+.perfil_texto{
+    flex:3;
+}
+
+.perfil_texto h2{
+    font-size: 30px;
+    color:#0a2f63;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.perfil_texto{
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #173b70;
+}
+
+.instalaciones{
+    text-align:center;
+    padding:80px;
+}
+
+.instalaciones h2{
+    font-size: 30px;
+    color:#0a2f63;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.instalaciones img{
+    width:100%;
+    max-width:1200px;
+    border-radius:20px;
+}
+
+.instalaciones img:hover{
+    transform: scale(1.05);
+}
+
+main{
+    max-width:1400px;            /* Evita que el contenido ocupe toda la pantalla */
+    margin:auto;                 /* Centra el contenido */
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 30px;
+    line-height: 1.1;     /* separa las líneas */
+    color:#0a2f63;
+}
+
+/* -----------
+--------------
+--------------
+---ANIMACIÓN---- */
+@keyframes aparecerDerecha{   /* Sirve para crear una animación personalizada */
+    from{                     /* Indica como inicia */
+        opacity: 0;           /* Controla la transparencia (invisible) */
+        transform: translateX(200px);      /* Mueve elementos horizontalemente (Empieza en 200 pixeles más a la derecha)*/
+    }
+
+    to{                       /* Indica como termina */
+        opacity: 1;           /* Controla la transparencia (visible) */
+        transform: translateX(0);          /* Mueve elementos horizontalemente (Termina en su posición normal)*/
+    }
+}

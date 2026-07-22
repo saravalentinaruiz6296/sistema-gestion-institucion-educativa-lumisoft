@@ -1,0 +1,123 @@
+h1{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 30px;
+    line-height: 1.1;     /* separa las líneas */
+    color:#0a2f63;
+}
+
+.contenedor_preescolar{
+    display:grid;
+    grid-template-columns:1fr 1fr;   /* Divide la página en dos columnas */
+    gap:80px;
+    padding:60px 80px;
+    align-items:start;
+}
+
+.preescolar_info{
+    text-align:center;
+}
+
+.preescolar_info h2{
+    color:#0a2f63;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.preescolar_info p{
+    line-height:1.8;
+    font-size:18px;
+    text-align:justify;
+}
+
+.preescolar_img{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.preescolar_img img{
+    width:450px;
+    height:300px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 4px 10px #d3c7b5;
+}
+
+.asignaturas{
+    padding-top:30px;
+}
+
+.asignaturas h2{
+    color:#0a2f63;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.horario{
+    text-align:center;
+}
+
+.horario h2{
+    color:#0a2f63;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#2e5597;
+    color:white;
+}
+
+th,
+td{
+    border:1px solid #d8ccbb;
+    padding:15px;
+    text-align:center;
+}
+
+tbody tr:hover{
+    background:#edf2ff;
+}
+
+.frase{
+    text-align:center;
+    font-size:22px;
+    font-style:italic;
+    color:#2e5597;
+    margin-bottom:50px;
+}
+
+.galeria{
+    grid-column:1/3;
+    text-align:center;
+    margin-top:40px;
+}
+
+.galeria h2{
+    color:#0a2f63;
+    margin-bottom:30px;
+}
+
+.imagenes{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.imagenes img{
+    width:450px;
+    height:250px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 2px 8px #d3c7b5;
+}
+
+.imagenes img:hover{
+    transform: scale(1.05);
+}
