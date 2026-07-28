@@ -1,195 +1,441 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Academia Atenea</title>
+
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+
+    <!--==================================
+                    HEADER
+    ===================================-->
+
     <header>
-        <!-- Contenedor del logo -->
+
+        <!-- Logo Institucional -->
         <div class="logo_lema">
-            <img src="img/logo.png" alt="Logo">
-            <img src="img/lema.png" alt="Lema">
+            <img src="img/logo.png"
+                 alt="Logo oficial de la Academia Atenea">
+
+            <img src="img/lema.png"
+                 alt="Sabiduría que inspira, educación que transforma">
         </div>
 
-    <!--Menú de navegación principal-->
-    <nav>
-        <ul class="menu">
 
-            <!--Opción Inicio-->
-            <li><a href="index.html">Inicio</a></li>
+        <!--==================================
+                MENÚ DE NAVEGACIÓN
+        ===================================-->
 
-            <!--Opción Nosotros-->
-            <li class="submenu">
-                <a href="nosotros.html">Nosotros &#9662;</a>
-                <ul class="submenu">
-                    <li><a href="nosotros.html#historia">Historia</a></li>
-                    <li><a href="nosotros.html#mision">Misión</a></li>
-                    <li><a href="nosotros.html#vision">Visión</a></li>
-                    <li><a href="nosotros.html#perfil">Perfil</a></li>
-                    <li><a href="nosotros.html#instalaciones">Instalaciones</a></li>
-                </ul>
-            </li>
+        <nav>
 
-            <!--Opción Programas Académicos-->
-            <li class="submenu">
-                <a href="programa_academico.html">Programas Académicos &#9662;</a>
-                <ul class="submenu">
-                    <li><a href="programa_academico_preescolar.html">Preescolar</a></li>
-                    <li><a href="programa_academico_primaria.html">Primaria</a></li>
-                    <li><a href="programa_academico_bachillerato.html">Bachillerato</a></li>
-                </ul>
-            </li>
+            <ul class="menu">
 
-            <!--Opción Servicios-->
-            <li><a href="servicios.html">Servicios</a></li>
+                <!-- Inicio -->
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
 
-            <!--Opción Noticias-->
-            <li><a href="noticias.html">Noticias</a></li>
 
-            <!--Opción Contacto-->
-            <li><a href="contacto.html">Contacto</a></li>
+                <!-- Nosotros -->
+                <li class="submenu">
 
-        </ul>
-    </nav>
+                    <a href="nosotros.html">
+                        Nosotros &#9662;
+                    </a>
+
+                    <ul class="submenu">
+                        <li><a href="nosotros.html#historia">Historia</a></li>
+                        <li><a href="nosotros.html#mision">Misión</a></li>
+                        <li><a href="nosotros.html#vision">Visión</a></li>
+                        <li><a href="nosotros.html#perfil">Perfil</a></li>
+                        <li><a href="nosotros.html#instalaciones">Instalaciones</a></li>
+                    </ul>
+
+                </li>
+
+
+                <!-- Programas Académicos -->
+                <li class="submenu">
+
+                    <a href="programa_academico.html">
+                        Programas Académicos &#9662;
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="programa_academico_preescolar.html">
+                                Preescolar
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="programa_academico_primaria.html">
+                                Primaria
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="programa_academico_bachillerato.html">
+                                Bachillerato
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+
+                <!-- Servicios -->
+                <li>
+                    <a href="servicios.html">Servicios</a>
+                </li>
+
+
+                <!-- Noticias -->
+                <li>
+                    <a href="noticias.html">Noticias</a>
+                </li>
+
+
+                <!-- Contacto -->
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
     </header>
 
+
+    <!--==================================
+                    MAIN
+    ===================================-->
+
     <main>
+
         <article class="principal">
+
             <h1 hidden>Inicio</h1>
+
+
+            <!--==================================
+                        BANNER
+            ===================================-->
+
             <section class="banner">
-                <h2 hidden>Galeria Institucional</h2>
+
+                <h2 hidden>Galería Institucional</h2>
+
                 <div class="contenedor_slider">
+
                     <div class="slider">
-                        <img src="img/entrada.png" alt="Entrada Principal Academia Atenea">
-                        <img src="img/estudiantes.png" alt="Alumnos Academia Atenea">
-                        <img src="img/docentes.png" alt="Docentes Academia Atenea">
-                        <img src="img/cine.png" alt="Cine Academia Atenea">
-                        <img src="img/laboratorio.png" alt="Laboratorio Academia Atenea">
+
+                        <img src="img/entrada.png"
+                             alt="Entrada principal de la Academia Atenea">
+
+                        <img src="img/estudiantes.png"
+                             alt="Estudiantes de la Academia Atenea">
+
+                        <img src="img/docentes.png"
+                             alt="Docentes de la Academia Atenea">
+
+                        <img src="img/cine.png"
+                             alt="Actividad audiovisual de la Academia Atenea">
+
+                        <img src="img/laboratorio.png"
+                             alt="Laboratorio académico de la Academia Atenea">
+
                     </div>
+
                 </div>
+
             </section>
+
+
+            <!--==================================
+                PRESENTACIÓN INSTITUCIONAL
+            ===================================-->
+
             <section class="info_inicio">
+
                 <div class="presentacion_texto">
-                <h2>Presentación Institucional</h2>
-                <br>
-                <p>La Academia Atenea es una institución 
-                   educativa comprometida con la formación integral de sus estudiantes, 
-                   basada en los valores de la sabiduría, la excelencia y la 
-                   transformación personal. Inspirados en la figura de la diosa Atenea, 
-                   símbolo del conocimiento y la justicia, promovemos una educación que 
-                   combina el pensamiento crítico, la creatividad y el respeto por el 
-                   entorno. Nuestro propósito es guiar a cada alumno hacia el desarrollo 
-                   de sus talentos y la construcción de un futuro lleno de oportunidades, 
-                   donde el aprendizaje se convierte en una herramienta para inspirar 
-                   y transformar la sociedad.</p>
+
+                    <h2>Presentación Institucional</h2>
+
+                    <br>
+
+                    <p>
+                        La Academia Atenea es una institución educativa
+                        comprometida con la formación integral de sus
+                        estudiantes, fundamentada en la excelencia académica,
+                        la innovación y el desarrollo humano.
+                    </p>
+
+                    <p>
+                        Inspirados en la sabiduría y el liderazgo que
+                        representa Atenea, promovemos una educación que
+                        fortalece el pensamiento crítico, la creatividad y la
+                        responsabilidad social.
+                    </p>
+
+                    <p>
+                        Nuestro propósito es acompañar a cada estudiante en el
+                        descubrimiento y desarrollo de sus capacidades,
+                        brindándole las herramientas necesarias para afrontar
+                        los desafíos del mundo actual y contribuir
+                        positivamente a la transformación de la sociedad.
+                    </p>
+
                 </div>
+
+
                 <div class="presentacion_imagen">
-                    <img src="img/presentacion_institu.png" alt="Presentación Institucional">
+
+                    <img src="img/presentacion_institu.png"
+                         alt="Presentación institucional de la Academia Atenea">
+
                 </div>
+
             </section>
+
+
+            <!--==================================
+                    EVENTOS DESTACADOS
+            ===================================-->
 
             <section class="eventos">
-                <div class="evento">
-                    <a href="noticias.html">
-                    <h3>Inauguración del Aula Digital Atenea (ADA)</h3>
-                    <br>
-                    <img src="img/aula_digital.png" alt="Inauguración del Aula Digital">
-                    <br><br>
-                    <p>La Academia Atenea celebró la apertura de su nueva Aula Digital (ADA)
-                       equipada con tecnología de última generación. Este espacio transformará
-                       la práctica educativa permitiendo a los estudiantes acceder a recursos
-                       interactivos y fortalecer sus competencias en innovación y desarrollo
-                       tecnológico.</p>
-                    </a>
-                </div>
+
+                <h2>Eventos Destacados</h2>
+
+
+                <!-- Evento 1 -->
 
                 <div class="evento">
+
                     <a href="noticias.html">
-                    <h3>Semana Cultural Atenea 2026  </h3>
-                    <br>
-                    <img src="img/semana_cultural.png" alt="Semana Cultural">
-                    <br><br>
-                    <p>Durante la primera semana de agosto, la institución llevará a 
-                       cabo la Semana Cultural, un evento que reunirá presentaciones 
-                       artísticas, exposiciones académicas y actividades deportivas. 
-                       El objetivo es fomentar la creatividad, el talento y la 
-                       integración de toda la comunidad educativa.</p>
+
+                        <h3>
+                            Inauguración del Aula Digital Atenea (ADA)
+                        </h3>
+
+                        <br>
+
+                        <img src="img/aula_digital.png"
+                             alt="Inauguración del Aula Digital Atenea">
+
+                        <br><br>
+
+                        <p>
+                            La Academia Atenea celebró la apertura de su nueva
+                            Aula Digital (ADA), equipada con tecnología de
+                            última generación. Este espacio permitirá fortalecer
+                            las competencias digitales de los estudiantes y
+                            promover metodologías innovadoras de aprendizaje.
+                        </p>
+
                     </a>
+
                 </div>
 
+
+                <!-- Evento 2 -->
+
                 <div class="evento">
+
                     <a href="noticias.html">
-                    <h3>Reconocimiento a la Excelencia Académica</h3>
-                    <br>
-                    <img src="img/excelencia_academica.png" alt="Reconocimiento a la Excelencia Académica">
-                    <br><br>
-                    <p>En la ceremonia anual de premiación, la Academia Atenea entregó 
-                        distinciones a los estudiantes más destacados en rendimiento 
-                        académico, liderazgo y compromiso social. Este evento reafirma 
-                        el lema institucional: “Sabiduría que inspira, educación que 
-                        transforma”.</p>
+
+                        <h3>
+                            Semana Cultural Atenea 2026
+                        </h3>
+
+                        <br>
+
+                        <img src="img/semana_cultural.png"
+                             alt="Actividades de la Semana Cultural Atenea 2026">
+
+                        <br><br>
+
+                        <p>
+                            Durante la primera semana de agosto, la institución
+                            desarrollará actividades artísticas, académicas y
+                            deportivas que fortalecerán la integración y el
+                            talento de toda la comunidad educativa.
+                        </p>
+
                     </a>
+
                 </div>
+
+
+                <!-- Evento 3 -->
+
+                <div class="evento">
+
+                    <a href="noticias.html">
+
+                        <h3>
+                            Reconocimiento a la Excelencia Académica
+                        </h3>
+
+                        <br>
+
+                        <img src="img/excelencia_academica.png"
+                             alt="Ceremonia de reconocimiento a la excelencia académica">
+
+                        <br><br>
+
+                        <p>
+                            La Academia Atenea reconoce el esfuerzo y liderazgo
+                            de los estudiantes destacados por su excelencia
+                            académica y compromiso social, reafirmando el lema
+                            institucional: “Sabiduría que inspira, educación
+                            que transforma”.
+                        </p>
+
+                    </a>
+
+                </div>
+
             </section>
+
         </article>
+
     </main>
+
+
+
+    <!--==================================
+                    FOOTER
+    ===================================-->
 
     <footer>
 
-    <!-- Contenedor del logo -->
+        <!-- Logo Institucional -->
+
         <div class="footer_logo">
-            <img src="img/logo.png" alt="Logo">
-            <img src="img/lema.png" alt="Lema">
+
+            <img src="img/logo.png"
+                 alt="Logo oficial de la Academia Atenea">
+
+            <img src="img/lema.png"
+                 alt="Sabiduría que inspira, educación que transforma">
+
         </div>
 
-    <!--Contenedor de Información de contacto-->
+
+        <!-- Información de contacto -->
+
         <div class="footer_contacto">
+
             <ul class="f_contacto">
+
                 <li>
-                    <a href="https://maps.app.goo.gl/JpehVs1fyv797S8ZA" target="_blank">
-                    <img src="img/ubicacion.png" alt="ícono Ubicación">
-                     Transversal 2 Este 58A-235. Tunja
+
+                    <a href="https://maps.app.goo.gl/JpehVs1fyv797S8ZA"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img src="img/ubicacion.png"
+                             alt="Ícono de ubicación">
+
+                        Transversal 2 Este 58A-235. Tunja
+
                     </a>
+
                 </li>
+
+
                 <li>
-                    <a href="https://www.whatsapp.com/?lang=es" target="_blank">
-                    <img src="img/llamada.png" alt="ícono Telefono">
-                    +57 3178800792
+
+                    <a href="https://www.whatsapp.com/?lang=es"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img src="img/llamada.png"
+                             alt="Ícono de teléfono">
+
+                        +57 3178800792
+
                     </a>
+
                 </li>
+
+
                 <li>
+
                     <a href="mailto:admin@academiaateneatunja.edu.co">
-                    <img src="img/correo.png" alt="ícono Correo">
-                    admin@academiaateneatunja.edu.co
+
+                        <img src="img/correo.png"
+                             alt="Ícono de correo electrónico">
+
+                        admin@academiaateneatunja.edu.co
+
                     </a>
+
                 </li>
+
             </ul>
+
         </div>
 
-    <!--Contenedor redes y Copyrigth-->
-    <div class="footer_info_redes">
-    <!--Contenedor Redes-->
-        <div class="footer_redes">
-        <a href="https://www.youtube.com/" target="_blank">
-            <img src="img/youtube.png" alt="ícono de Youtube">
-        </a>
-        <a href="https://www.facebook.com/" target="_blank">
-            <img src="img/facebook.png" alt="ícono de Facebook">
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img src="img/instagram.png" alt="ícono de Instagram">
-        </a>
-        </div>
 
-    <!--Copyrigth-->
-        <div class="footer_derechos">
-            © 2026 - Academia Atenea
+        <!-- Redes Sociales -->
+
+        <div class="footer_info_redes">
+
+            <div class="footer_redes">
+
+                <a href="https://www.youtube.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="img/youtube.png"
+                         alt="Ícono de YouTube">
+
+                </a>
+
+
+                <a href="https://www.facebook.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="img/facebook.png"
+                         alt="Ícono de Facebook">
+
+                </a>
+
+
+                <a href="https://www.instagram.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="img/instagram.png"
+                         alt="Ícono de Instagram">
+
+                </a>
+
+            </div>
+
+
+            <!-- Derechos de Autor -->
+
+            <div class="footer_derechos">
+                © 2026 - Academia Atenea
+            </div>
+
         </div>
-    </div>
 
     </footer>
+
 </body>
+
 </html>
