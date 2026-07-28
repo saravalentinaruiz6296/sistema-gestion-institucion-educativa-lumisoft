@@ -72,15 +72,15 @@
                     <ul class="f_contacto">
                        <li>
                         <img src="img/ubicacion.png" alt="ícono Ubicación">
-                        Transversal 2 Este 58A-235. Tunja
+                        <a href="https://www.google.com/maps?q=Tunja,Boyacá,Colombia" target="_blank" rel="noopener">Transversal 2 Este 58A-235. Tunja</a>
                        </li>
                        <li>
                         <img src="img/llamada.png" alt="ícono Telefono">
-                        +57 3178800792
+                        <a href="tel:+573178800792">+57 3178800792</a>
                        </li>
                        <li>
                         <img src="img/correo.png" alt="ícono Correo">
-                        admin@academiaateneatunja.edu.co
+                        <a href="mailto:admin@academiaateneatunja.edu.co">admin@academiaateneatunja.edu.co</a>
                        </li>
                     </ul>
                 </div>
@@ -97,7 +97,10 @@
                 <h2 hidden>Formulario</h2>
                 <form action="#">
                     <div class="fila">
+                        <label for="nombres" class="sr-only">Nombres</label>
                         <input type="text"
+                        id="nombres"
+                        name="nombres"
                         placeholder="Nombres"
                         required
                         minlength="3"
@@ -105,34 +108,40 @@
                         pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
                         title="Solo se permiten letras">
 
+                        <label for="apellidos" class="sr-only">Apellidos</label>
                         <input type="text"
+                        id="apellidos"
+                        name="apellidos"
                         placeholder="Apellidos"
                         required
-                        maxlength="3"
-                        minlength="40"
+                        minlength="3"
+                        maxlength="40"
                         pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
                         title="Solo se permiten letras">
                     </div>
 
                     <div class="fila">
+                        <label for="telefono" class="sr-only">Teléfono</label>
                         <input type="tel"
+                        id="telefono"
+                        name="telefono"
                         placeholder="Teléfono"
                         required
                         pattern="[0-9]{10}"
                         maxlength="10"
                         title="Ingrese un teléfono de 10 dígitos">
 
+                        <label for="correo" class="sr-only">Correo Electrónico</label>
                         <input type="email"
+                        id="correo"
                         name="correo"
                         placeholder="Correo Electrónico"
                         required
                         maxlength="60">
                     </div>
 
-                    <div class="fila_programa">
-                        <label>
-                            Programa de Interés
-                        </label>
+                    <fieldset class="fila_programa">
+                        <legend>Programa de Interés</legend>
                         <div class="opciones">
                             <label>
                                 <input type="radio"
@@ -156,8 +165,11 @@
                                 Bachillerato
                             </label>
                         </div>
-                    </div>
+                    </fieldset>
+
+                    <label for="comentario" class="sr-only">Inquietud o Comentario</label>
                     <textarea 
+                    id="comentario"
                     name="comentario"
                     placeholder="Inquietud o Comentario"
                     required
@@ -194,15 +206,15 @@
             <ul class="f_contacto">
                 <li>
                     <img src="img/ubicacion.png" alt="ícono Ubicación">
-                     Transversal 2 Este 58A-235. Tunja
+                    <a href="https://www.google.com/maps?q=Tunja,Boyacá,Colombia" target="_blank" rel="noopener">Transversal 2 Este 58A-235. Tunja</a>
                 </li>
                 <li>
                     <img src="img/llamada.png" alt="ícono Telefono">
-                    +57 3178800792
+                    <a href="tel:+573178800792">+57 3178800792</a>
                 </li>
                 <li>
                     <img src="img/correo.png" alt="ícono Correo">
-                    admin@academiaateneatunja.edu.co
+                    <a href="mailto:admin@academiaateneatunja.edu.co">admin@academiaateneatunja.edu.co</a>
                 </li>
             </ul>
         </div>
