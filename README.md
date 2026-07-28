@@ -129,7 +129,7 @@ refactor: reorganizar estructura del código
 1. Clonar el repositorio.
 
 ```bash
-git clone https://github.com/USUARIO/NOMBRE-REPOSITORIO.git
+git clone https://github.com/saravalentinaruiz6296/sistema-gestion-institucion-educativa-lumisoft.git
 ```
 
 2. Abrir el proyecto en Visual Studio Code.
