@@ -59,3 +59,8 @@ h1{
 .servicio:active{
     background-color: rgb(194, 206, 254);
 }
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px #d3c7b5;
+    transition: all 0.3s ease;
+}
