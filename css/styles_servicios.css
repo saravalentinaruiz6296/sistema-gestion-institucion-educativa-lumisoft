@@ -6,6 +6,7 @@ h1{
     color:#0a2f63;
 }
 
+
 .servicios{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -15,6 +16,7 @@ h1{
     justify-content: center;
     margin: auto;
 }
+
 
 .abajo{
     transform:translateX(50%);

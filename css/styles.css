@@ -12,8 +12,6 @@ img{
     max-width: 100%;
     height: auto;
 }
-
-
 /*==================================
             MENÚ
 ==================================*/
@@ -172,7 +170,6 @@ img{
 
 }
 
-
 /*==================================
             CELULARES
 ==================================*/
@@ -184,43 +181,32 @@ img{
         font-size: 35px;
 
     }
-
-
     .presentacion_texto p{
 
         font-size: 17px;
 
     }
-
-
     .evento{
 
         width: 100%;
 
     }
-
-
     .evento img{
 
         width: 220px;
         height: 220px;
 
     }
-
-
     .contenedor_slider{
 
         height: 300px;
 
     }
-
-
     .slider img{
 
         height: 300px;
 
     }
-
 }
 /* -----------
 --------------
