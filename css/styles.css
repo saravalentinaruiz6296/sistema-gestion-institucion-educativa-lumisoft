@@ -1,229 +1,301 @@
-/*==================================
-        MEJORAS VISUALES
-==================================*/
+/*Reset básico*/ /* Elimina márgenes predeterminados */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
-    line-height: 1.6;
-    overflow-x: hidden;
+    background-color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Encabezado */
 
-/* Todas las imágenes serán responsive */
-
-img{
-    max-width: 100%;
-    height: auto;
+header{
+    background:#b6d1ec;
+    display:flex;  /*Convierte el header en un contenedor flexible.*/
+    justify-content:space-between;  /*Empuja los elementos a los extremos.*/
+    align-items:center;   /*Centra verticalmente.*/
+    padding:15px 40px;   /*Da espacio interno.*/
+    position: sticky;  /* Le permite al header manejar la posición de sus elementos internos */
+    top: 0; /* Sin margen */
+    z-index: 1000;      /*Hace que el encabezado esté por encima de otros elementos */
 }
 
+/*Organizar el logo*/
+.logo_lema{
+    display:flex;   /*Coloca las dos imágenes en una sola línea.*/
+    align-items:center;   /*Centra verticalmente.*/
+    gap:12px;   /*Da separación entre ellas.*/
+}
 
-/*==================================
-            MENÚ
-==================================*/
+/*Dar tamaño a las imágenes*/
+.logo_lema img:first-child{
+    width:80px;
+}
 
+.logo_lema img:last-child{
+    width:180px;
+}
+
+/*Organizar el menú*/
+.menu{
+    display:flex;   /*Coloca los botones horizontalmente.*/
+    list-style:none;   /*quita las viñetas*/
+    gap:35px;   /*Da separación entre ellas.*/
+    align-items: center;
+}
+
+/*Diseño de los enlaces*/
 .menu li a{
-    transition: 0.3s;
+    text-decoration:none;
+    color:#2e5597;
+    font-size:18px;
+    font-weight:bold;
+    padding:10px;
+} 
+
+/*Efecto al pasar el mouse*/
+.menu li a:hover{
+    color:#ffcc00;
+}
+
+/*Barra de navegación*/
+nav{
+    background-color: #b6d1ec; /*color institucional*/
 }
 
 
-/*==================================
-            EVENTOS
-==================================*/
+.menu a{
+    display: block;   /*todo el recuadro es clicable*/
+    color: #ffffff;
+    text-decoration: none;  /*quita el subrayado*/
+    padding: 15px 20px;
+}
+
+.menu a:hover{
+    background-color: #2e5597; /*cambio al pasar el mouse*/
+}
+
+/*Submenú desplegable (solo CSS)*/
+.menu li{
+    position: relative; /*punto de referencia del submenú*/
+}
+
+/*Solo la LISTA anidada se oculta (ul.submenu), no el li padre*/
+ul.submenu{
+    display: none;                                 /*oculta por defecto*/
+    position: absolute;                            /*flota debajo de la opción*/
+    top: 100%;                                     /*justo debajo del enlace padre*/
+    left: 0;
+    background-color: #b6d1ec;
+    min-width: 210px;
+    list-style: none;
+    z-index: 1000;                                 /* elementos se muestren por encima del resto del contenido */
+}
+
+/*Al pasar el mouse por el li padre, se muestrasu lista*/
+li.submenu:hover > ul.submenu{
+    display: block;
+}
+
+ul.submenu a{
+    padding: 12px 20px;
+}
+
+ul.submenu a:hover{
+    background-color: #3f6bb5;
+}
+
+footer{
+    display: flex;   /*Coloca todo horizontalmente.*/
+    justify-content:space-between;   /*Empuja los elementos a los extremos.*/
+    align-items:center;   /*Los centra verticalmente.*/
+    padding:20px 40px;
+    background:#b6d1ec;
+}
+
+.footer_logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer_logo img:first-child{
+    width: 80px;
+}
+
+.footer_logo img:last-child{
+    width: 180px;
+}
+
+.f_contacto{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;   /* Elimina el subrayado */
+    color: inherit;         /* Hereda el color del texto circundante */
+}
+
+.footer_contacto li{
+    display: flex;   /*Convierte cada <li> en un contenedor flexible.*/
+    align-items: center;   /*Centra verticalmente el ícono y el texto.*/
+    gap: 10px;   /*Agrega separación entre el ícono y el texto.*/
+    margin: 8px 0px;
+    font-size: 14px;
+}
+
+.footer_contacto img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;  /*ajusta la imagen para que quepa dentro de su contenedor mostrándose completa y sin deformarse*/
+}
+
+.footer_info_redes{
+    display: flex;
+    flex-direction: column;   /*Coloca los elementos verticalmente*/
+    align-items: center;      /*Centra elementos*/
+    gap: 12px;
+}
+
+.footer_redes img{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;  /*ajusta la imagen para que quepa dentro de su contenedor mostrándose completa y sin deformarse*/
+}
+
+.footer_redes{
+    display: flex;
+    gap: 20px;
+}
+
+.footer_redes a{
+text-decoration: none;
+font-size: 28px;
+}
+
+.footer_derechos{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+/*---------------
+-----------------
+------BANNER-----
+-----------------*/
+.banner{
+    width:100%;
+    overflow: hidden;   /* Oculta todo lo que salga del banner */
+}
+
+.contenedor_slider{
+    width:100%;
+    height:500px;
+    position:relative;     /* Permite colocar los botones encima de las imágenes */
+    overflow:hidden;
+}
+
+.slider{
+    display:flex;     /* Coloca las imágenes en una sola fila */
+    height:100%;
+    animation: moverBanner 20s infinite;      /* ANIMACIÓN */
+}
+
+.slider img{
+    min-width: 100%;
+    height:500px;
+    object-fit:cover;     /* Hace que la imagen ocupe todo el espacio sin deformarse */
+}
+
+.info_inicio{
+    display: flex;    /* Coloca texto e imagen en la misma fila */
+    justify-content: space-between;     /*Separa el texto e imagen*/
+    align-items: center;
+    gap: 80px;                 /*Da espacio entre ellas*/
+    padding: 70px 80px;
+    /* ANIMACIÓN */
+    animation: aparecerDerecha 1.5s ease;     /* Nombre de la animación, Duración y Hace que empiece y termine suevemente*/
+}
+
+.presentacion_texto{
+    flex: 1;              /* ocupa el espacio disponible*/
+    color: #16396b;
+}
+
+.presentacion_texto h2{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 30px;
+    line-height: 1.1;     /* separa las líneas */
+    color:#0a2f63;
+}
+
+.presentacion_texto p{
+    font-size:20px;
+    line-height:1.5;     /* separa las líneas */
+    text-align:justify;
+    color:#173b70;
+}
+
+.presentacion_imagen{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.presentacion_imagen img{
+    width:100%;
+    max-width:750px;
+    border-radius:30px;
+}
 
 .eventos{
-    flex-wrap: wrap;
-    padding: 60px 40px;
+    display: flex;    /*Coloca los tres eventos en una fila.*/
+    justify-content: space-around;   /*Distribuye uniformemente el espacio.*/
+    align-items: flex-start;     /*Separa cada tarjeta*/
+    gap: 40px; 
+    padding: 40px;
 }
-
 
 .evento{
-    transition: 0.4s;
+    width: 700px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #d8ccbb;
+    border-radius: 12px; /* esquinas redondeadas*/
+    background-color: #ffffff; /* fondo blanco */
+    box-shadow: 0 2px 8px #d3c7b5; /* sombra suave*/
+    text-align: center;   /* centra el contenido de la tarjeta */
 }
 
+.evento{
+    color: #2e5597;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.evento p{
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.evento img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: contain;  /*ajusta la imagen para que quepa dentro de su contenedor mostrándose completa y sin deformarse*/
+}
 
 .evento:hover{
     transform: scale(1.05);
 }
 
-
-/*==================================
-        PRESENTACIÓN
-==================================*/
-
-.presentacion_texto p{
-    line-height: 1.7;
-}
-
-
-.presentacion_imagen{
-    transition: 0.4s;
-}
-
-
 .presentacion_imagen:hover{
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
-
-/*==================================
-            FOOTER
-==================================*/
-
-.footer_derechos{
-    text-align: center;
-    margin-top: 15px;
-}
-
-
-/*==================================
-            RESPONSIVE
-==================================*/
-
-@media(max-width:1024px){
-
-    .info_inicio{
-
-        gap: 50px;
-        padding: 50px;
-
-    }
-
-
-    .presentacion_texto h2{
-
-        font-size: 45px;
-
-    }
-
-
-    .evento{
-
-        width: 500px;
-
-    }
-
-}
-
-
-/*==================================
-        TABLETS Y MÓVILES
-==================================*/
-
-@media(max-width:768px){
-
-    header{
-
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-
-    }
-
-
-    .menu{
-
-        flex-direction: column;
-        gap: 10px;
-
-    }
-
-
-    .logo_lema{
-
-        flex-direction: column;
-
-    }
-
-
-    .info_inicio{
-
-        flex-direction: column;
-        padding: 40px;
-
-    }
-
-
-    .eventos{
-
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-
-    footer{
-
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-
-    }
-
-
-    .footer_contacto{
-
-        text-align: center;
-
-    }
-
-
-    .footer_redes{
-
-        justify-content: center;
-
-    }
-
-}
-
-
-/*==================================
-            CELULARES
-==================================*/
-
-@media(max-width:480px){
-
-    .presentacion_texto h2{
-
-        font-size: 35px;
-
-    }
-
-
-    .presentacion_texto p{
-
-        font-size: 17px;
-
-    }
-
-
-    .evento{
-
-        width: 100%;
-
-    }
-
-
-    .evento img{
-
-        width: 220px;
-        height: 220px;
-
-    }
-
-
-    .contenedor_slider{
-
-        height: 300px;
-
-    }
-
-
-    .slider img{
-
-        height: 300px;
-
-    }
-
-}
 /* -----------
 --------------
 --------------
