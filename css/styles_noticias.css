@@ -50,6 +50,7 @@ h1{
     height: 300px;
     border-radius: 10px;
     object-fit: contain;  /*ajusta la imagen para que quepa dentro de su contenedor mostrándose completa y sin deformarse*/
+    transition: transform 0.4s ease; /* Transición suave para el zoom */
 }
 
 .inicio:hover{
@@ -57,11 +58,25 @@ h1{
 }
 
 .noticia:hover{
-    transform: scale(1.05);
+    transform: scale(1.08);/* Acerca ligeramente la imagen al hacer hover */
 }
 
 time{
     color: #2e5597;
     font-style: oblique;
     font-size: 20px;
+}
+/* Hace que la primera noticia ocupe las 3 columnas del grid */
+.noticia.inicio:first-child {
+    grid-column: 1 / -1;
+    flex-direction: row; /* Pone la imagen al lado del texto */
+    align-items: center;
+    text-align: left;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.noticia.inicio:first-child img {
+    width: 400px;
+    height: 300px;
+    margin-right: 30px;
 }
