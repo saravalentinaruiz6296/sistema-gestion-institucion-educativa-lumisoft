@@ -1,134 +1,188 @@
-/*==================================
-        MEJORAS VISUALES
-==================================*/
+/*Reset básico*/ /* Elimina márgenes predeterminados */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     line-height: 1.6;
     overflow-x: hidden;
 }
+
+
 /* Todas las imágenes serán responsive */
 
 img{
     max-width: 100%;
     height: auto;
 }
+
+
 /*==================================
             MENÚ
 ==================================*/
 
 .menu li a{
-    transition: 0.3s;
+    text-decoration:none;
+    color:#2e5597;
+    font-size:18px;
+    font-weight:bold;
+    padding:10px;
+} 
+
+/*Efecto al pasar el mouse*/
+.menu li a:hover{
+    color:#ffcc00;
+}
+
+/*Barra de navegación*/
+nav{
+    background-color: #b6d1ec; /*color institucional*/
 }
 
 
-/*==================================
-            EVENTOS
-==================================*/
-
-.eventos{
-    flex-wrap: wrap;
-    padding: 60px 40px;
+.menu a{
+    display: block;   /*todo el recuadro es clicable*/
+    color: #ffffff;
+    text-decoration: none;  /*quita el subrayado*/
+    padding: 15px 20px;
 }
 
-
-.evento{
-    transition: 0.4s;
+.menu a:hover{
+    background-color: #2e5597; /*cambio al pasar el mouse*/
 }
 
-
-.evento:hover{
-    transform: scale(1.05);
+/*Submenú desplegable (solo CSS)*/
+.menu li{
+    position: relative; /*punto de referencia del submenú*/
 }
 
-
-/*==================================
-        PRESENTACIÓN
-==================================*/
-
-.presentacion_texto p{
-    line-height: 1.7;
+/*Solo la LISTA anidada se oculta (ul.submenu), no el li padre*/
+ul.submenu{
+    display: none;                                 /*oculta por defecto*/
+    position: absolute;                            /*flota debajo de la opción*/
+    top: 100%;                                     /*justo debajo del enlace padre*/
+    left: 0;
+    background-color: #b6d1ec;
+    min-width: 210px;
+    list-style: none;
+    z-index: 1000;                                 /* elementos se muestren por encima del resto del contenido */
 }
 
-
-.presentacion_imagen{
-    transition: 0.4s;
+/*Al pasar el mouse por el li padre, se muestrasu lista*/
+li.submenu:hover > ul.submenu{
+    display: block;
 }
 
-
-.presentacion_imagen:hover{
-    transform: scale(1.03);
+ul.submenu a{
+    padding: 12px 20px;
 }
 
+ul.submenu a:hover{
+    background-color: #3f6bb5;
+}
 
-/*==================================
-            FOOTER
-==================================*/
+footer{
+    display: flex;   /*Coloca todo horizontalmente.*/
+    justify-content:space-between;   /*Empuja los elementos a los extremos.*/
+    align-items:center;   /*Los centra verticalmente.*/
+    padding:20px 40px;
+    background:#b6d1ec;
+}
+
+.footer_logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer_logo img:first-child{
+    width: 80px;
+}
+
+.footer_logo img:last-child{
+    width: 180px;
+}
+
+.f_contacto{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;   /* Elimina el subrayado */
+    color: inherit;         /* Hereda el color del texto circundante */
+}
+
+.footer_contacto li{
+    display: flex;   /*Convierte cada <li> en un contenedor flexible.*/
+    align-items: center;   /*Centra verticalmente el ícono y el texto.*/
+    gap: 10px;   /*Agrega separación entre el ícono y el texto.*/
+    margin: 8px 0px;
+    font-size: 14px;
+}
+
+.footer_contacto img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;  /*ajusta la imagen para que quepa dentro de su contenedor mostrándose completa y sin deformarse*/
+}
+
+.footer_info_redes{
+    display: flex;
+    flex-direction: column;   /*Coloca los elementos verticalmente*/
+    align-items: center;      /*Centra elementos*/
+    gap: 12px;
+}
+
+.footer_redes img{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;  /*ajusta la imagen para que quepa dentro de su contenedor mostrándose completa y sin deformarse*/
+}
+
+.footer_redes{
+    display: flex;
+    gap: 20px;
+}
+
+.footer_redes a{
+text-decoration: none;
+font-size: 28px;
+}
 
 .footer_derechos{
-    text-align: center;
-    margin-top: 15px;
+    margin-top:10px;
+    font-weight:bold;
 }
 
-
-/*==================================
-            RESPONSIVE
-==================================*/
-
-@media(max-width:1024px){
-
-    .info_inicio{
-
-        gap: 50px;
-        padding: 50px;
-
-    }
-
-
-    .presentacion_texto h2{
-
-        font-size: 45px;
-
-    }
-
-
-    .evento{
-
-        width: 500px;
-
-    }
-
+/*---------------
+-----------------
+------BANNER-----
+-----------------*/
+.banner{
+    width:100%;
+    overflow: hidden;   /* Oculta todo lo que salga del banner */
 }
 
+.contenedor_slider{
+    width:100%;
+    height:500px;
+    position:relative;     /* Permite colocar los botones encima de las imágenes */
+    overflow:hidden;
+}
 
-/*==================================
-        TABLETS Y MÓVILES
-==================================*/
+.slider{
+    display:flex;     /* Coloca las imágenes en una sola fila */
+    height:100%;
+    animation: moverBanner 20s infinite;      /* ANIMACIÓN */
+}
 
-@media(max-width:768px){
-
-    header{
-
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-
-    }
-
-
-    .menu{
-
-        flex-direction: column;
-        gap: 10px;
-
-    }
-
-
-    .logo_lema{
-
-        flex-direction: column;
-
-    }
-
+.slider img{
+    min-width: 100%;
+    height:500px;
+    object-fit:cover;     /* Hace que la imagen ocupe todo el espacio sin deformarse */
+}
 
     .info_inicio{
 
@@ -170,6 +224,7 @@ img{
 
 }
 
+
 /*==================================
             CELULARES
 ==================================*/
@@ -181,32 +236,43 @@ img{
         font-size: 35px;
 
     }
+
+
     .presentacion_texto p{
 
         font-size: 17px;
 
     }
+
+
     .evento{
 
         width: 100%;
 
     }
+
+
     .evento img{
 
         width: 220px;
         height: 220px;
 
     }
+
+
     .contenedor_slider{
 
         height: 300px;
 
     }
+
+
     .slider img{
 
         height: 300px;
 
     }
+
 }
 /* -----------
 --------------
