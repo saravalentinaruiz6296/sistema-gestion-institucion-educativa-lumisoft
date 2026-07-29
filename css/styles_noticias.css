@@ -50,6 +50,7 @@ h1{
     height: 300px;
     border-radius: 10px;
     object-fit: contain;  /*ajusta la imagen para que quepa dentro de su contenedor mostrándose completa y sin deformarse*/
+    transition: transform 0.4s ease; /* Transición suave para el zoom */
 }
 
 .inicio:hover{
@@ -57,7 +58,7 @@ h1{
 }
 
 .noticia:hover{
-    transform: scale(1.05);
+    transform: scale(1.08);/* Acerca ligeramente la imagen al hacer hover */
 }
 
 time{
