@@ -3,7 +3,14 @@
 --------------------NOSOTROS-------------------------------
 -----------------------------------------------------------
 -----------------------------------------------------------*/
-
+.intro_nosotros{
+    max-width:900px;
+    margin:0 auto 50px;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+    color:#173b70;
+}
 .historia{
     display: flex;
     justify-content: space-between;
@@ -43,6 +50,12 @@
     background-color: #ffffff; /* fondo blanco */
     box-shadow: 0 2px 8px #d3c7b5; /* sombra suave*/
     text-align: center; /* centra el contenido de la tarjeta */
+}
+.historia_multimedia h3{
+    font-size: 22px;
+    color: #0a2f63;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .historia_multimedia video{
@@ -128,6 +141,10 @@
 .vision:hover{
     transform: scale(1.05);
 }
+.mision,
+.vision{
+    transition:0.4s;
+}
 
 .perfil{
     display:flex;
@@ -141,6 +158,9 @@
     flex:1;
     display:flex;
     justify-content:center;
+}
+.perfil_imagen img{
+    transition:0.4s;
 }
 
 .perfil_imagen img{
@@ -181,11 +201,21 @@
     margin-bottom: 30px;
     text-align: center;
 }
+.instalaciones p{
+    max-width:900px;
+    margin:0 auto 30px;
+    text-align:center;
+    line-height:1.8;
+    color:#173b70;
+}
 
 .instalaciones img{
     width:100%;
     max-width:1200px;
     border-radius:20px;
+}
+.instalaciones img{
+    transition:0.4s;
 }
 
 .instalaciones img:hover{
@@ -194,8 +224,11 @@
 
 main{
     max-width:1400px;            /* Evita que el contenido ocupe toda la pantalla */
-    margin:auto;                 /* Centra el contenido */
+    margin:auto;               /* Centra el contenido */
+    background:#f8fbff;
+    padding:20px;
 }
+
 
 h1{
     text-align: center;
