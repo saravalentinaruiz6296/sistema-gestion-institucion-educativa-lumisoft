@@ -9,3 +9,16 @@ h1{
 .p_academico img{
     width: 100%;
 }
+.resumen_programas{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.resumen_programas h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0b3d91;
+}
